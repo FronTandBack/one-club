@@ -34,6 +34,7 @@ body
 	position: relative
 	line-height: 1.75
 	font-family: $default-font
+	font-weight: 700
 	overflow-x: hidden
 	opacity: 1
 
@@ -41,5 +42,76 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
+.container
+	display: block
+	margin: 0 auto
+	padding: 0 20px
+	max-width: 100%
+	width: 1221px
+
+.header 
+	background: $background-color
+	&__top
+		display: flex
+		flex-flow: row wrap
+		position: relative
+		min-height: 118px
+		border-bottom: 1px solid #606060
+
+	&__logo
+		width: 28%
+		padding-top: 30px
+		.logo
+			display: block
+			img
+				object-fit: none
+				max-width: 100%
+				height: auto
+
+	&__catalog
+		position: relative
+		width: 30%
+
+	&__auth
+		width: 42%
+
+
+.header__catalog-inner 
+	position: absolute
+	bottom: 0
+	transform: translateX(25%);
+	.share
+		display: inline-block
+		width: 60px
+		padding-top: 0.5em
+		padding-bottom: 0.5em
+		padding-left: 56px
+		padding-right: 30px
+		font-family: $default-font
+		font-weight: 300
+		font-size: 14px
+		color: #000
+		text-transform: uppercase
+		background: #e5e5e5
+		box-sizing: content-box
+		&::before
+		
+	.ctlg 
+		position: absolute
+		bottom: 0px
+		left: 113px
+		display: inline-block
+		vertical-align: baseline
+		padding-top: 11px
+		padding-right: 35px
+		padding-bottom: 11px
+		padding-left: 45px
+		color: #ffffff
+		background: #f68235
+		clip-path: polygon(27% 0, 100% 0, 100% 100%, 0 100%)
+
+
+
 
 @import "media" // Всегда в конце

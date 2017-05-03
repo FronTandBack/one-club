@@ -10,8 +10,7 @@ html(lang="ru")
 		link(rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon")
 		<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-       
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">   
 		// Chrome, Firefox OS and Opera
 		meta(name="theme-color" content="#000")
 		// Windows Phone 
@@ -20,5 +19,40 @@ html(lang="ru")
 		link(rel="stylesheet" href="css/main.min.css")
 		script(src="js/scripts.min.js")
 	body
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptas blanditiis odit beatae sunt obcaecati libero quos vel sit nemo nesciunt est iusto, qui amet repudiandae aspernatur officia molestias laborum.
-
+		.header
+			.container
+				.header__top
+					.header__logo
+						a(href="").logo 
+							img(src="img/logo.png", alt="One club")
+					.header__catalog
+						.header__catalog-inner
+							a(href="#").share Акции
+							a(href="#").ctlg Каталог
+					.header__auth
+						.user-list 
+							.user-list__schedule 
+								span.user-list__schedule--phone +380 44 359-08-99 
+								span.user-list__schedule--days Пн-Вс: 9:00 - 21:00 
+							.user-list__sign
+								a(href="#") Войти
+							.user-list__cart
+								a(href="#") Корзина
+						form.search-form
+							input(type="search").search-form__input
+							button(type="submit").search-form__button
+				.header__bottom
+					nav.menu
+						ul.menu__list
+							li.menu__item
+								a(href="").menu__link женщинам 
+							li.menu__item
+								a(href="").menu__link мужчинам
+							li.menu__item
+								a(href="").menu__link детям
+							li.menu__item
+								a(href="").menu__link косметика
+							li.menu__item
+								a(href="").menu__link для дома
+							li.menu__item
+								a(href="").menu__link бренды

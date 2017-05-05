@@ -72,18 +72,18 @@ html(lang="ru")
 							li.breadcrumbs__item
 								a(href="#") Costa Patch Pocket Denim Top
 						.slider
-							a.slider__prev
+							a(onclick="plusItem(-1)").slider__prev
 								span.slider__icon
-							a.slider__next
+							a(onclick="plusItem(1)").slider__next
 								span.slider__icon
 							ul.slider__items
-								li(onclick="currentDiv(1)").slider__item.slider__item--active
+								li(onclick="currentItem(1)").slider__item.slider__item--active
 									img(src="img/clothes_sm4.png", alt="")
-								li(onclick="currentDiv(2)").slider__item
+								li(onclick="currentItem(2)").slider__item
 									img(src="img/clothes_sm2.png", alt="")
-								li(onclick="currentDiv(3)").slider__item
+								li(onclick="currentItem(3)").slider__item
 									img(src="img/clothes_sm3.png", alt="")
-								li(onclick="currentDiv(4)").slider__item
+								li(onclick="currentItem(4)").slider__item
 									img(src="img/clothes_sm4.png", alt="")
 							.slider__main
 								img(class="slider__main-item" src="img/clothes_m.png", alt="Clothes")

@@ -8,15 +8,29 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+// @media only screen and (max-width : 992px)
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
-
+	.container
+		max-width: 100%
+		width: 752px
+		padding-left: 10px
+		padding-right: 10px
+	.header__top
+		justify-content: space-between
+	.header__catalog
+		position: absolute
+		left: 25px
+		bottom: -1px
+	.header__logo
+		width: 40%
+		img
+			width: 230px
+			min-height: 36px
+	.header__auth
+		width: 60%
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
@@ -25,6 +39,39 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
+	.container
+		max-width: 100%
+		padding-left: 0
+		padding-right: 0
+	.header__logo
+		width: 100%
+		// left: 0
+		// right: 0
+		text-align: center
+	.header__catalog
+		width: 100%
+		bottom: -30px
+		left: 0
+		.header__catalog-inner
+			width: 100%
+			transform: none
+			left: 0
+			.share 
+				padding-top: 10px
+				padding-bottom: 14px
+				padding-left: 56px
+				padding-right: 60px
+				&:before 
+					top: 8px
+			.ctlg
+				padding-top: 20px
+				padding-right: 68px
+				padding-bottom: 18px
+				padding-left: 60px
+	.header__auth
+		display: none
+	.header__bottom
+		display: none
 
 
 /*==========  Mobile First  ==========*/

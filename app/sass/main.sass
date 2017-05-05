@@ -326,8 +326,195 @@ body
 	display: flex
 	width: 1020px
 	margin: 0 auto
+	justify-content: space-between
 
 .product-cart__left
 	width: 511px
 
+.product-cart__right
+	width: 403px
+.breadcrumbs
+	margin-top: 25px
+	margin-bottom: 35px
+	font-family: $default-font
+	font-weight: 300
+	font-size: 0
+	&__item
+		position: relative
+		margin-right: 9px
+		display: inline-block
+		a
+			font-size: 12px
+			text-decoration: none
+			color: #000
+			transition: color .3s ease-in-out
+	&__item:nth-of-type(-n + 3) 
+		a 
+			color: $accent
+			&:hover
+				color: black
+	&__item + &__item:before 
+		content: "/\00a0"
+		top: 0
+		left: -6px
+		position: absolute
+		// padding: 0 2px
+		color: black
+		font-size: 12px
+
+
+.slider
+	position: relative
+	display: flex
+	justify-content: flex-start;
+	&__items
+		height: 530px
+		padding: 35px 0
+		margin-right: 10em
+	&__item
+		margin-bottom: 1em
+	&:before
+		display: block
+		position: absolute
+		content: ''
+		width: 21px
+		height: 21px
+		top: 0px
+		left: 160px
+		background-image: url("../img/clock.png")
+		background-repeat: no-repeat
+.slider__item--active
+	img
+		overflow: hidden
+		width: 71px
+	border: 1px solid $accent
+
+.slider__prev,
+.slider__next
+	display: block
+	position: absolute
+
+.slider__prev
+	top: 0
+	left: 27px
+	span.slider__icon
+		display: block
+		width: 23px
+		height: 23px
+		background-image: url("../img/arrow_prev.png") 
+		background-repeat: no-repeat
+
+.slider__next
+	bottom: 130px
+	left: 27px
+	span.slider__icon
+		display: block
+		width: 23px
+		height: 23px
+		background-image: url("../img/arrow_nex.png") 
+		background-repeat: no-repeat
+
+
+
+.stock 
+	position: relative
+	display: block
+	width: 175px
+	margin-top: 15px
+	margin-left: auto
+	margin-bottom: 15px
+	padding-top: 10px
+	padding-bottom: 10px
+	padding-left: 50px
+	background-color: #e6e6e6
+	&:before 
+		content: ""
+		position: absolute
+		width: 28px
+		height: 28px
+		top: 10px
+		left: 10px
+		background-image: url("../img/clock2.png")
+		background-repeat: no-repeat
+		background-position: center
+	span:first-child
+		font-family: $default-font
+		font-size: 12px
+		font-weight: 100
+		display: block
+	span:last-child
+		display: block
+		font-family: $default-font
+		font-size: 14px
+		font-weight: 400
+		color: $accent
+
+.brand 
+	position: relative
+	padding-bottom: 20px
+	border-bottom: 2px solid #dedede
+.brand__title
+	margin: 0 
+	font-family: inherit
+	font-weight: 300
+	font-size: 25px
+	color: $accent
+	line-height: 1
+.brand__desc
+	font-family: inherit
+	font-size: 18px
+	font-weight: 100
+	line-height: 1
+.brand__price
+	display: block
+	font-family: inherit
+	font-weight: 300
+	font-size: 25px
+	line-height: 2
+	&--first
+		color: #999999
+		padding-right: 8px
+		text-decoration: line-through
+	&--second
+		color: $accent
+.brand__icon
+	position: absolute
+	right: 0
+	bottom: 20px
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	font-size: 16px
+	text-align: center
+	line-height: 50px
+	color: #fff
+	font-family: $second-font
+	background-color: #828282
+
+.color
+	padding-top: 10px
+	padding-bottom: 15px
+	border-bottom: 2px solid #dedede
+	
+.color__text
+	font-size: 14px
+	margin-bottom: 10px
+	span:first-child
+		font-weight: 600
+		padding-right: 2px
+	span:last-child
+		font-weight: 100
+.color__list
+	.color__item
+		display: inline-block
+		vertical-align: baseline
+		width: 35px
+		height: 35px
+		margin-right: 5px
+
+@for $i from 1 through length($colors)
+	.color__list .color__item:nth-child(#{$i})
+		background-color: nth($colors, $i)
+.color__item--border
+	border: 2px solid $accent
 @import "media" // Всегда в конце

@@ -16,7 +16,6 @@
     <meta name="msapplication-navbutton-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
     <link rel="stylesheet" href="css/main.min.css">
-    <script src="js/scripts.min.js"></script>
   </head>
   <body>
     <div class="header">
@@ -58,34 +57,43 @@
       <div class="container">
         <div class="product-cart__inner">
           <div class="product-cart__left">
-            <div class="breadrumps">
-              <ul>
-                <li><a href="#">Главная страница</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Категория 1</a></li>
-                <li><a href="#">Costa Patch Pocket Denim Top</a></li>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="#">Главная страница</a></li>
+              <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
+              <li class="breadcrumbs__item"><a href="#">Категория 1</a></li>
+              <li class="breadcrumbs__item"><a href="#">Costa Patch Pocket Denim Top</a></li>
+            </ul>
+            <div class="slider"><a class="slider__prev"><span class="slider__icon"></span></a><a class="slider__next"><span class="slider__icon"></span></a>
+              <ul class="slider__items">
+                <li class="slider__item slider__item--active" onclick="currentDiv(1)"><img src="img/clothes_sm4.png" alt=""></li>
+                <li class="slider__item" onclick="currentDiv(2)"><img src="img/clothes_sm2.png" alt=""></li>
+                <li class="slider__item" onclick="currentDiv(3)"><img src="img/clothes_sm3.png" alt=""></li>
+                <li class="slider__item" onclick="currentDiv(4)"><img src="img/clothes_sm4.png" alt=""></li>
               </ul>
-            </div>
-            <div class="slider">
-              <ul class="slider__aside-panel">
-                <li class="slider__item"><img src="" alt=""></li>
-                <li class="slider__item"><img src="" alt=""></li>
-                <li class="slider__item"><img src="" alt=""></li>
-                <li class="slider__item"><img src="" alt=""></li>
-              </ul>
-              <div class="slider__main-img"><img src="" alt=""></div>
+              <div class="slider__main"><img class="slider__main-item" src="img/clothes_m.png" alt="Clothes"><img class="slider__main-item" src="img/sm-2.jpg" alt="Clothes"><img class="slider__main-item" src="img/sm-3.jpg" alt="Clothes"><img class="slider__main-item" src="img/sm-4.jpg" alt="Clothes"></div>
             </div>
           </div>
           <div class="product-cart__right">
             <div class="stock"><span>До конца распродажи</span><span>3 дня 15:37:01</span></div>
             <div class="brand">
               <h3 class="brand__title">Current Elliot</h3><span class="brand__desc">Costa Patch Pocket Denim Top</span>
-              <div class="brand__price"><span class="brand__price--first"></span><span class="brand__price--second"></span></div>
+              <div class="brand__price"><span class="brand__price--first">30 000 грн</span><span class="brand__price--second">15 000</span></div>
               <div class="brand__icon">-50%</div>
+            </div>
+            <div class="color">
+              <div class="color__text"><span>Цвет: </span><span>Синий</span></div>
+              <ul class="color__list">
+                <li class="color__item"></li>
+                <li class="color__item color__item--border"></li>
+                <li class="color__item"></li>
+                <li class="color__item"></li>
+                <li class="color__item"></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

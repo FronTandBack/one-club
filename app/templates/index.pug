@@ -17,7 +17,7 @@ html(lang="ru")
 		meta(name="msapplication-navbutton-color" content="#000")
 		meta(name="apple-mobile-web-app-status-bar-style" content="#000")
 		link(rel="stylesheet" href="css/main.min.css")
-		script(src="js/scripts.min.js")
+		//- script(src="js/scripts.min.js")
 	body
 		.header
 			.container
@@ -62,29 +62,34 @@ html(lang="ru")
 			.container
 				.product-cart__inner
 					.product-cart__left
-						.breadrumps
-							ul
-								li
-									a(href="#") Главная страница
-								li
-									a(href="#") Каталог
-								li
-									a(href="#") Категория 1
-								li
-									a(href="#") Costa Patch Pocket Denim Top
+						ul.breadcrumbs
+							li.breadcrumbs__item
+								a(href="#") Главная страница
+							li.breadcrumbs__item
+								a(href="#") Каталог
+							li.breadcrumbs__item
+								a(href="#") Категория 1
+							li.breadcrumbs__item
+								a(href="#") Costa Patch Pocket Denim Top
 						.slider
-							ul.slider__aside-panel
-								li.slider__item
-									img(src="", alt="")
-								li.slider__item
-									img(src="", alt="")
-								li.slider__item
-									img(src="", alt="")
-								li.slider__item
-									img(src="", alt="")
-							.slider__main-img
-								img(src="", alt="")
-
+							a.slider__prev
+								span.slider__icon
+							a.slider__next
+								span.slider__icon
+							ul.slider__items
+								li(onclick="currentDiv(1)").slider__item.slider__item--active
+									img(src="img/clothes_sm4.png", alt="")
+								li(onclick="currentDiv(2)").slider__item
+									img(src="img/clothes_sm2.png", alt="")
+								li(onclick="currentDiv(3)").slider__item
+									img(src="img/clothes_sm3.png", alt="")
+								li(onclick="currentDiv(4)").slider__item
+									img(src="img/clothes_sm4.png", alt="")
+							.slider__main
+								img(class="slider__main-item" src="img/clothes_m.png", alt="Clothes")
+								img(class="slider__main-item" src="img/sm-2.jpg", alt="Clothes")
+								img(class="slider__main-item" src="img/sm-3.jpg", alt="Clothes")
+								img(class="slider__main-item" src="img/sm-4.jpg", alt="Clothes")
 					.product-cart__right
 						.stock
 							span До конца распродажи
@@ -93,9 +98,21 @@ html(lang="ru")
 							h3.brand__title Current Elliot
 							span.brand__desc Costa Patch Pocket Denim Top
 							.brand__price
-								span.brand__price--first
-								span.brand__price--second
+								span.brand__price--first 30 000 грн
+								span.brand__price--second 15 000
 							.brand__icon -50%
+						.color
+							.color__text
+								span Цвет: 
+								span Синий
+							ul.color__list
+								li.color__item
+								li.color__item.color__item--border
+								li.color__item
+								li.color__item
+								li.color__item
+		script(src="js/scripts.min.js")
+
 
 
 
